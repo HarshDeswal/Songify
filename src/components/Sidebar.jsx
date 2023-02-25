@@ -1,3 +1,5 @@
+import
+
 const Sidebar = () => (
   <div>Sidebar</div>
 );
