@@ -16,9 +16,13 @@ import axios from 'axios';
     }),
     endpoints:(builder) => ({
         getTopCharts:builder.query({query: ()=> '/charts/track'}),
+        getSongDetails:builder.query({query:({songid})=>`/songs/get-details?key=${songid}`}),
+        getSongRelated:builder.query({query: ({songid})=>`/tracks/related?track_id=${songid}`}),
     }),
   });
 
   export const {
     useGetTopChartsQuery,
+    useGetSongDetailsQuery,
+    useGetSongRelatedQuery,
   } = shazamCoreApi;
