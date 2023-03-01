@@ -15,8 +15,8 @@ const SongDetails = () => {
     if (isFetchingSongDetails || isFetchinRelatedSongs) return <Loader title="Searching song details" />;
     if (error) return <Error />;
     
-    const vr = Object.entries(data.resources['shazam-songs']);
-    console.log(vr)
+    // const vr = Object.entries(data.resources['shazam-songs']);
+    // console.log(vr)
 
     const handlePauseClick = () => {
         dispatch(playPause(false));
@@ -43,14 +43,14 @@ const SongDetails = () => {
             )}
         </div>
       </div>
-            <RelatedSongs
+            {/* <RelatedSongs
             data={vr}
             artistId={artistId}
             isPlaying={isPlaying}
             activeSong={activeSong}
             handlePauseClick={handlePauseClick}
             handlePlayClick={handlePlayClick}
-            />
+            /> */}
            
         </div>
     );
