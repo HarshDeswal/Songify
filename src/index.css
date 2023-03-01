@@ -5,10 +5,8 @@
 /* Active Navigation Link */
 @media only screen and (max-width: 1280px){
   html {
-    
     overflow-x: hidden;
   }
-  
   body {
     
     position: relative;
