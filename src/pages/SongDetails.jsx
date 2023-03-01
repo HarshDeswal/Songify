@@ -9,9 +9,14 @@ const SongDetails = () => {
     const {activeSong,isPlaying} = useSelector((state) => state.player);
     const { data:songData,isFetching:isFetchingSongDetails,error} = useGetSongDetailsQuery({songid});
     const { data, isFetching: isFetchinRelatedSongs } = useGetSongRelatedQuery({ songid });
+    
 
+    
     if (isFetchingSongDetails || isFetchinRelatedSongs) return <Loader title="Searching song details" />;
     if (error) return <Error />;
+    
+    const vr = Object.entries(data.resources['shazam-songs']);
+    console.log(vr)
 
     const handlePauseClick = () => {
         dispatch(playPause(false));
@@ -39,7 +44,7 @@ const SongDetails = () => {
         </div>
       </div>
             <RelatedSongs
-            data={data}
+            data={vr}
             artistId={artistId}
             isPlaying={isPlaying}
             activeSong={activeSong}

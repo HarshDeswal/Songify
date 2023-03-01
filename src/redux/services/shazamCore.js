@@ -17,7 +17,9 @@ import axios from 'axios';
     endpoints:(builder) => ({
         getTopCharts:builder.query({query: ()=> '/charts/track'}),
         getSongDetails:builder.query({query:({songid})=>`/songs/get-details?key=${songid}`}),
-        getSongRelated:builder.query({query: ({songid})=>`/tracks/related?track_id=${songid}`}),
+        getSongRelated:builder.query({query: ({songid})=>`/shazam-songs/list-similarities?id=track-similarities-id-${songid}`}),
+        getArtistDetails:builder.query({query:(artistId) => `/artists/get-top-songs?id=${artistId}`}),
+        // getSongsByCountry: builder.query({query:(countryCode) => `/charts/country?country_code=${countryCode}`}),
     }),
   });
 
@@ -25,4 +27,6 @@ import axios from 'axios';
     useGetTopChartsQuery,
     useGetSongDetailsQuery,
     useGetSongRelatedQuery,
+    useGetArtistDetailsQuery,
+    // useGetSongsByCountryQuery
   } = shazamCoreApi;
