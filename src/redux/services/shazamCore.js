@@ -6,7 +6,7 @@ import axios from 'axios';
     baseQuery:fetchBaseQuery({
         baseUrl :'https://shazam.p.rapidapi.com',
         prepareHeaders :(headers)=>{
-            headers.set('X-RapidAPI-Key','f68553add8msh5200b60a4c40c58p1f6d34jsn05b0ac15e397');
+            headers.set('X-RapidAPI-Key','65c5d8d837msh57d48acb96fe2dap19ae23jsndfaa8d48d21c');
 
             return headers;
         },
