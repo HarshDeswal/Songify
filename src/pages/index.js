@@ -7,8 +7,8 @@ import TopCharts from './TopCharts';
 import AroundYou from './AroundYou';
 
 export {
-  Discover,
   Search,
+  Discover,
   TopArtists,
   ArtistDetails,
   SongDetails,

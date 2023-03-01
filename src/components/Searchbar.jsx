@@ -10,7 +10,7 @@ const Searchbar = () => {
   }
   return (
 
-    <form onSubmit={handleSubmit} autoComplete="off" className="p-2 text-fray-400 focus-within:text-gray-600">
+    <form onSubmit={handleSubmit} autoComplete="off" className="p-2 overflow-auto text-fray-400 focus-within:text-gray-600">
     <label htmlFor="search-field" className="sr-only">
       Search all songs
     </label>
